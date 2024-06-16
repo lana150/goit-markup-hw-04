@@ -76,7 +76,7 @@ h3 {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
-.address-list-item-link {
+.address-list-item {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -208,10 +208,10 @@ h3 {
   width: calc((100% - 72px) / 4);
 }
 
-.features-icon { 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+.features-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 264px;
@@ -241,6 +241,7 @@ h3 {
   color: #434455;
 }
 /* Section-3- team */
+
 .team {
   background-color: #f4f4fd;
   padding-top: 120px;
@@ -301,26 +302,25 @@ h3 {
 .list {
   display: flex;
   gap: 24px;
-  margin-top: 8px;
-  padding-left: 16px;
-  padding-right: 16px; 
-}
-
-.item {
-  justify-content: center; 
-
-}
-
-.item .link {
-  display: flex;
-  align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
+  margin-top: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   gap: 24px;
   margin-top: 8px;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item .link:hover {
@@ -328,10 +328,9 @@ h3 {
 }
 .item .link:focus {
   background-color: #404bbf;
-
 }
 .svg {
-  fill:#f4f4fd ;
+  fill: #f4f4fd;
 }
 
 /* Section-4-portfolio */
@@ -361,12 +360,14 @@ h3 {
 .portfolio-list-card {
   width: calc((100% - 48px) / 3);
   position: relative;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+  0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 .portfolio-list-card:hover .portfolio-cover-text {
   transform: translateY(0);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+ 
 
 .portfolio-image {
   background: url("path_to_image");
@@ -379,7 +380,7 @@ h3 {
 .portfolio-cover-wraper {
   position: relative;
   overflow: hidden;
-  transition: box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-cover-text {
@@ -391,7 +392,9 @@ h3 {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   background-color: #4d5ae5;
-  padding: 40px 32px 164px;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -455,7 +458,7 @@ h3 {
 }
 
 .footer-content {
-  margin-right: 120px
+  margin-right: 120px;
 }
 
 .footer-list {
@@ -472,20 +475,22 @@ h3 {
   border-radius: 50%;
   gap: 16px;
   background-color: #4d5ae5;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover {
   background-color: #31d0aa;
 }
 
-svg {
-  fill: #f4f4fd ;
+.footer-link:focus {
+  background-color: #31d0aa;
+}
 
+svg {
+  fill: #f4f4fd;
 }
 .footer-ikon {
-  fill: #f4f4fd ;
+  fill: #f4f4fd;
 }
 
 .social-title {
